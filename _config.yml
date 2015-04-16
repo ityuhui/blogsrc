@@ -66,6 +66,6 @@ theme: landscape
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: github
+deploy: 
+  type: git 
   repo: git@github.com:ityuhui/ityuhui.github.io.git
