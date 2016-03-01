@@ -8,4 +8,4 @@ hexo init之后的源代码,用于生成blog
 在墙内的机器上，pull，修改source/_post/目录下的文章，修改完成后commit and push
 
 # 发布
-在墙外的机器上，pull, hexo clean,hexo g,hexo d,commit and push
+在墙外的机器上，pull, hexo clean,hexo g,hexo d
