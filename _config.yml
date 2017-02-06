@@ -64,6 +64,8 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: landscape-plus
 
+duoshuo_shortname: ityuhui
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy: 
