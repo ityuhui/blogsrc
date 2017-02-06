@@ -9,3 +9,9 @@ hexo init之后的源代码,用于生成blog
 
 # 发布
 在墙外的机器上，pull, hexo clean,hexo g,hexo d
+
+# 更新主题
+```
+cd themes/landscape-plus
+git pull
+```
