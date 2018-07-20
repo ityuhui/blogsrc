@@ -36,12 +36,3 @@ Car.prototype.toString = function () {
 };
 ```
 
-## The Module Pattern
-
-
-
-
-
-
-
-
