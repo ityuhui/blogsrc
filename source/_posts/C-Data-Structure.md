@@ -1,9 +1,9 @@
-title: "C++11 STL里的容器"
+title: "C++ STL里的容器"
 date: 2016-02-01 22:10:43
 tags:
 ---
 
-# C++11 STL里的容器
+# C++ STL里的容器
 
 ## 顺序容器：
 vector: 数组实现，单向，相当于Java的 ArrayList
