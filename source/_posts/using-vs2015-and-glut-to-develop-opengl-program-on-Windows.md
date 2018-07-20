@@ -1,8 +1,8 @@
-title: "使用 VC++ 2015 编写Windows平台下的OpenGL程序"
+title: "使用 Visual Studio 2015 编写Windows平台下的OpenGL程序"
 date: 2016-03-01 09:49:13
 tags:
 ---
-OpenGL是跨平台的三维图形库，本文介绍如何使用VC++ 2015搭建Windows平台下的OpenGL开发环境
+OpenGL是跨平台的三维图形库，本文介绍如何使用Visual Studio ( VC++ ) 2015搭建Windows平台下的OpenGL开发环境
 
 ## 无需下载
 
