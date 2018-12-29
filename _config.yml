@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 五年后
+title: Be Great
 subtitle:
 description:
 author: Hui Yu
@@ -63,8 +63,6 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: next
-
-duoshuo_shortname: ityuhui
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
