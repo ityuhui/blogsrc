@@ -1,4 +1,6 @@
-title: "Work with Kernel Development Community"
+title: "参与内核开发社区"
 date: 2019-02-27 09:20:02
 tags:
 ---
+
+正文在我的MBP13上，完成后上传
