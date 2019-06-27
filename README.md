@@ -10,8 +10,16 @@ hexo init之后的源代码,用于生成blog
 # 发布
 在墙外的机器上，pull, hexo clean,hexo g,hexo d
 
-# 更新主题
-```
-cd themes/landscape-plus
-git pull
-```
+# 更换主题
+在搜索引擎上搜索 "hexo 主题"
+
+# 更换了运行blogsrc的机器，重新搭建环境
+
+- 将blogsrc从github上clone下来
+- 安装nodejs,npm
+- 安装hexo-cli
+- 安装其他缺失的插件（npm ls --depth 0）
+- 重新下载主题
+- hexo clean,hexo g,hexo d
+
+
