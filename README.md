@@ -15,11 +15,23 @@ hexo init之后的源代码,用于生成blog
 
 # 更换了运行blogsrc的机器，重新搭建环境
 
-- 将blogsrc从github上clone下来
-- 安装nodejs,npm
-- 安装hexo-cli
-- 安装其他缺失的插件（npm ls --depth 0）
-- 重新下载主题
-- hexo clean,hexo g,hexo d
+## 将blogsrc从github上clone下来
+## 安装nodejs
+## 安装hexo-cli
+```
+npm install -g hexo-cli --proxy http://127.0.0.1:7071
+```
+## 到blogsrc目录下
+```
+npm install hexo --save --proxy http://127.0.0.1:7071 
+```
+## 安装其他缺失的插件
+
+### 先使用（npm ls --depth 0）查找缺失的包
+### 再使用npm install来安装
+
+## 重新下载主题
+
+## hexo clean,hexo g,hexo d
 
 
