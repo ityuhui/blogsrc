@@ -42,3 +42,5 @@ freeglut是一个小型的图形工具库，用于提供创建和关闭窗口，
 ### 5. 编写代码
 
 https://github.com/ityuhui/openglsam
+
+## [评论](https://github.com/ityuhui/BlogComments/issues)
