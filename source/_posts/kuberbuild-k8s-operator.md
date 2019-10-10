@@ -44,6 +44,22 @@ kubebuilder create api --group ego --version v1 --kind Activity
 
 ### 开发运行
 
+#### 例子
+
+##### 获得系统Pod
+```
+        podList := &corev1.PodList{}
+        err := r.List(ctx, podList, client.InNamespace("kube-system"))
+        if err != nil {
+                fmt.Printf("failed to list pods in namespace default: %v\n", err)
+        } else {
+                for _, pod := range podList.Items {
+                        fmt.Println(pod.Spec.NodeName)
+                }
+        }
+
+```
+
 ### 部署
 
 ## 参考
