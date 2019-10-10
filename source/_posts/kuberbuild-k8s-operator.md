@@ -49,8 +49,8 @@ kubebuilder create api --group ego --version v1 --kind Activity
 ## 参考
 [使用kubebuilder开发kubernetes CRD](https://segmentfault.com/a/1190000019892302)
 
-
-
+## 评论
+[请在此评论](https://github.com/ityuhui/BlogComments/issues/2)
 
 
 
