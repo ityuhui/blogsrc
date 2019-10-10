@@ -30,9 +30,17 @@ tags:
 
 ## 使用
 
-### 创建
+### 初始化
+```
+go mod init module_name
 
-### 创建API
+kubebuilder init --domain example.com
+```
+
+### 创建API和controller
+```
+kubebuilder create api --group ego --version v1 --kind Activity
+```
 
 ### 开发运行
 
