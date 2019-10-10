@@ -38,6 +38,9 @@ tags:
 
 ### 部署
 
+## 参考
+[使用kubebuilder开发kubernetes CRD](https://segmentfault.com/a/1190000019892302)
+
 
 
 
