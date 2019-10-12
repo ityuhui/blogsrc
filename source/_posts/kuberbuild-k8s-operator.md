@@ -46,7 +46,7 @@ kubebuilder create api --group ego --version v1 --kind Activity
 
 #### 例子
 
-##### 获得系统Pod
+##### 获得系统pod
 ```
         podList := &corev1.PodList{}
         err := r.List(ctx, podList, client.InNamespace("kube-system"))
@@ -57,6 +57,33 @@ kubebuilder create api --group ego --version v1 --kind Activity
                         fmt.Println(pod.Spec.NodeName)
                 }
         }
+
+```
+##### 创建一个只运行一次的pod
+```
+        podName := "pod-sample-" + strconv.FormatInt(time.Now().Unix(), 10)
+        podCmd := []string{"sleep"}
+        podArgs := []string{"50"}
+
+        pod := &corev1.Pod{
+                ObjectMeta: metav1.ObjectMeta{
+                        Namespace: "default",
+                        Name:      podName,
+                },
+                Spec: corev1.PodSpec{
+                        Containers: []corev1.Container{
+                                corev1.Container{
+                                        Image:   "ubuntu",
+                                        Name:    "ubuntu",
+                                        Command: podCmd,
+                                        Args:    podArgs,
+                                },
+                        },
+                        RestartPolicy: "Never",
+                },
+        }
+        // c is a created client.
+        _ = r.Create(ctx, pod)
 
 ```
 
