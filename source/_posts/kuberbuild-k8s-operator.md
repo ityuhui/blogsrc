@@ -90,8 +90,8 @@ kubebuilder create api --group ego --version v1 --kind Activity
 ### 部署
 
 ## 参考
-[使用kubebuilder开发kubernetes CRD](https://segmentfault.com/a/1190000019892302)
-[K8S resource CURD samples](https://github.com/kubernetes-sigs/controller-runtime/blob/master/pkg/client/example_test.go)
+- [使用kubebuilder开发kubernetes CRD](https://segmentfault.com/a/1190000019892302)
+- [K8S resource CURD samples](https://github.com/kubernetes-sigs/controller-runtime/blob/master/pkg/client/example_test.go)
 
 ## 评论
 [请在此评论](https://github.com/ityuhui/BlogComments/issues/2)
