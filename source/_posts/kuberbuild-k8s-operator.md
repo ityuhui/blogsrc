@@ -8,6 +8,8 @@ tags:
 ## 介绍
 在kubernetes（以下简称k8s）里，operator指的是由CRD和controller共同构成的某项业务。CRD负责表示业务数据，controller负责业务操作（对业务数据的修改），两者共同完成某项业务在k8s里的运营。
 
+<!-- more -->
+
 创建CRD不需要编写程序，只需要写yaml文件，然后使用kubectrl命令部署到k8s里面就可以了，CRD部署到k8s之后，数据是存储在etcd里面的，只能手工（例如使用kubectrl）查询和修改，并没有什么实际作用，要想自动完成实际的业务，需要controller来实现。
 
 创建controller需要编程，controller的基本的流程是：
