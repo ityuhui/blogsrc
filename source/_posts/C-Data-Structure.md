@@ -3,12 +3,12 @@ date: 2016-02-01 22:10:43
 tags:
 ---
 
-# C++ STL里的容器
-
 ## 顺序容器：
 vector: 数组实现，单向，相当于Java的 ArrayList
 list： 双向链表，相当于Java的 LinkedList
 deque：双向队列
+
+<!--more-->
 
 ## 关联容器，用树实现
 map

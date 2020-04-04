@@ -1,9 +1,6 @@
 title: "Notes for Learning Javascript Design Patten"
 date: 2015-04-16 04:57:30
 tags:
----
-
-标签（空格分隔）： 未分类
 
 ---
 
@@ -18,6 +15,8 @@ Iterator, Mediator, Observer and Visitor
 
 Tips:
 Javascript是一门没有“类”的语言，但是可以用function来模拟"类"
+
+<!--more-->
 
 ## The Constructor Pattern
 这是Javascript特有的模式，其实就是传统面向对象编程语言里的类的构造函数

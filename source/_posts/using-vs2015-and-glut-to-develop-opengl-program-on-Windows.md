@@ -4,6 +4,8 @@ tags:
 ---
 OpenGL是跨平台的三维图形库，本文介绍如何使用Visual Studio ( VC++ ) 2015搭建Windows平台下的OpenGL开发环境
 
+<!--more-->
+
 ## 无需下载
 
 笔者使用的Windows 7 Professional，在安装了Visual Studio 2015之后，默认已有OpenGL的库文件和头文件。

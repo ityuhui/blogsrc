@@ -9,6 +9,8 @@ tags:
 > * **http library**
 使用libcurl库，其他知名的还有boost::asio,ACE，目前，libcurl的应用比较广泛。
 
+<!--more-->
+
 # 获得libcurl
 
 ## 到官方网站下载源代码包到本地
