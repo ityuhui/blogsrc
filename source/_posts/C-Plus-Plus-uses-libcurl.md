@@ -1,6 +1,14 @@
 title: "C++ 使用 libcurl"
+
 date: 2016-02-02 03:22:40
+
+categories:
+- 网络编程
+
 tags:
+- C++
+- libcurl
+
 ---
 # 简介
 使用C++编写http客户端程序，主要有下面两个方法：
