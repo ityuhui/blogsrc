@@ -3,7 +3,7 @@ title: 对桌面GUI库的思考
 date: 2013-09-11 16:47:49
 
 categories:
-- 技术方面的思考
+- 技术方面的思考和总结
 
 tags:
 - GUI
