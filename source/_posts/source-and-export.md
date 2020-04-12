@@ -3,7 +3,7 @@ title: source and export
 date: 2014-01-27 22:19:15
 
 categories:
-- Linux操作系统的使用
+- Linux
 
 tags:
 - linux
