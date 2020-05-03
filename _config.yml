@@ -70,3 +70,8 @@ theme: next
 deploy: 
   type: git 
   repo: git@github.com:ityuhui/ityuhui.github.io.git
+
+prism_plugin:
+  mode: 'preprocess' # realtime/preprocess
+  theme: 'default'
+  line_number: false # default false
