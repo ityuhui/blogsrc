@@ -15,6 +15,8 @@ Microsoft HPC Pack是微软的高性能分布式计算平台，类似于IBM Spec
 - hybird, 部署在本地，通常会把计算节点扩展到云上
 - on-demand 部署在云上
 
+<!--more-->
+
 ## on-premise部署
 
 ### 1. 部署准备
