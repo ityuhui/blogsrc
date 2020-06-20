@@ -75,7 +75,7 @@ kubernetes scheduler 是一个单独的进程，但是从代码逻辑上，分�
 
 缺点：http连接可能会有性能问题； 只能编写一个扩展器，插入到一个地点，无法做到多个扩展共同生效。
 
-### 3. 使用scheduler framwork
+### 3. 使用scheduler framework
 
 [参考](https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/20180409-scheduling-framework.md)
 
