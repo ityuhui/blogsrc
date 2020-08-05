@@ -14,8 +14,6 @@ tags:
 
 KeyCloak是Redhat开发的SSO服务程序。可以提供OpenID Connect服务。
 
-<!-- more -->
-
 ## 安装
 
 从官网下载压缩包，解压缩
@@ -25,6 +23,8 @@ KeyCloak是Redhat开发的SSO服务程序。可以提供OpenID Connect服务。
 ```sh
 bin/standalone.sh
 ```
+
+<!-- more -->
 
 ## 配置
 
@@ -99,6 +99,8 @@ keytool -importkeystore -deststorepass 'passw0rd' -destkeystore keycloak.jks -sr
 
 #### 配置Keycloak使用SSL
 
+把上一步生成的kaycloak.jks放到keycloak\standalone\configuration目录下
+
 使用Keycloak CLI:
 
 ```bash
@@ -137,3 +139,9 @@ https://ip:8443
 可以看到关于https证书的警告。代表配置成功。
 
 接下来，就可以配置Keycloak给kubernetes提供OIDC认证服务了。
+
+## 参考文献
+
+[Keycloak Documentation](https://www.keycloak.org/documentation.html)
+
+[为 Kubernetes 搭建支持 OpenId Connect 的身份认证系统](https://developer.ibm.com/zh/articles/cl-lo-openid-connect-kubernetes-authentication/)
