@@ -40,6 +40,8 @@ http://localhost:8080
 
 ### 创建realm
 
+取名Kubernetes
+
 ### 配置SSL访问
 
 #### 创建CA和证书
