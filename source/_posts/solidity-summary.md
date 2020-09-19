@@ -18,6 +18,10 @@ solidity是etherum上的智能合约编程语言，其语义类似于Javascript�
 
 <!--more-->
 
+## IDE
+
+最好的solidity IDE是[Remix](https://remix.ethereum.org/)，这是一个网页版的IDE。
+
 ## 文档
 
 https://solidity.readthedocs.io/
