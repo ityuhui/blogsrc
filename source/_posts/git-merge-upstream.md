@@ -72,6 +72,14 @@ git remote prune origin
 
 ```
 
+## 拉取远程存在，但是本地没有的分支
+
+```shell
+git pull
+
+git checkout -b abranch origin/abranch
+```
+
 ## 代码归滚
 
 ### 方式一，使用revert
