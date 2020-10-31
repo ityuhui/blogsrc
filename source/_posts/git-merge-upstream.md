@@ -80,7 +80,28 @@ git pull
 git checkout -b abranch origin/abranch
 ```
 
-## 代码归滚
+## 解决冲突
+
+解决冲突有两种方法，merge和rebase
+
+### rebase
+
+在开发分支上，执行
+```shell
+git rebase master
+```
+解决冲突
+执行
+```shell
+git add .
+git rebase --continue
+git commit
+```
+
+### merge
+我自己只用rebase
+
+## 代码回滚
 
 ### 方式一，使用revert
 会产生新的提交记录
