@@ -29,6 +29,24 @@ Jaeger backend: 将收到的信息汇总保存
 
 Jaeger UI: 展示汇总追踪信息
 
+All in one: 将上面除了Jaeger client之外的所有组件都放在一个应用程序里，用于开发和测试。
+
+## 使用All in one快速开始
+
+1. 启动all in one
+
+```shell
+jaeger-all-in-one --collector.zipkin.http-port=9411
+```
+
+2. 访问```http://localhost:16686```即可看到Jaeger GUI
+
+## 库
+
+Jeager提供了用于各种编程语言的库
+
+例如
+[Python client](https://github.com/jaegertracing/jaeger-client-python)
 
 
 
