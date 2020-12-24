@@ -101,6 +101,17 @@ git commit
 ### merge
 我自己只用rebase
 
+## git fetch and git merge
+虽然从效果上看 git pull = git fetch + git mrege/rebase，但是最好用两步的方法
+
+```shelll
+git fetch orgin master //将远程仓库的master分支下载到本地当前branch中
+
+git log -p master  ..origin/master //比较本地的master分支和origin/master分支的差别
+
+git merge origin/master //进行合并，注意merge/rebase命令后面跟的是branch，不能直接跟名字，例如origin
+```
+
 ## 代码回滚
 
 ### 方式一，使用revert
@@ -118,3 +129,4 @@ git push origin master
 git reset --hard HEAD^
 git push origin master -f
 ```
+
