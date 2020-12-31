@@ -26,8 +26,8 @@ solidity是etherum上的智能合约编程语言，其语义类似于Javascript�
 
 https://solidity.readthedocs.io/
 
-## 要点
-以下的要点总结来自于 [cryptozombies](https://cryptozombies.io/)
+## 语法总结
+以下的总结来自于 [cryptozombies](https://cryptozombies.io/)
 
 ### 版本指令
 ```solidity
@@ -269,3 +269,24 @@ function eatBLT(string sandwich) public {
 }
 ```
 
+## 从源代码编译solidity
+
+### Linux 平台
+
+[参考](https://docs.soliditylang.org/en/latest/installing-solidity.html#building-from-source)
+
+#### 依赖
+- GCC,version 8+
+- CMake
+- Boost
+- z3
+- cvc4
+
+#### 编译
+
+```shell
+mkdir build
+cd build
+cmake ..
+make
+```
