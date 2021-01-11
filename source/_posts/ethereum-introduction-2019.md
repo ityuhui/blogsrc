@@ -3,7 +3,7 @@ title: 以太坊的一些基本概念
 date: 2019-12-21 20:50:00
 
 categories:
-- 区块链
+- 区块链和以太坊
 
 tags:
 - block chain

@@ -3,7 +3,7 @@ title: Hyperledger Fabric的简单介绍
 date: 2019-12-16 21:36:54
 
 categories:
-- 区块链
+- 区块链和以太坊
 
 tags:
 - block chain

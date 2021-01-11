@@ -3,7 +3,7 @@ title: Ethereum Solidity的介绍和总结
 date: 2020-09-13 17:03:50
 
 categories:
-- 区块链
+- 区块链和以太坊
 
 tags:
 - block chain
