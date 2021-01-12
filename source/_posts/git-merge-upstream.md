@@ -65,6 +65,12 @@ git push origin --delete <BranchName>
 git remote show origin
 ```
 
+### 刷新远程的分支列表
+```shell
+git remote update origin --prune  #刷新origin
+git remote update upstream --prune #刷新upstream
+```
+可以取代下面这个命令
 ### 删除已经被远程删除的分支
 
 ```shell
@@ -75,7 +81,8 @@ git remote prune origin
 ## 拉取远程存在，但是本地没有的分支
 
 ```shell
-git pull
+
+git remote update origin --prune
 
 git checkout -b abranch origin/abranch
 ```
