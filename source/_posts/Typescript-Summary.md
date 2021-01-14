@@ -3,7 +3,7 @@ title: Typescript总结
 date: 2021-01-10 21:05:50
 
 categories:
-- 前端开发
+- 前端开发 Frontend Development
 
 tags:
 - typescript
