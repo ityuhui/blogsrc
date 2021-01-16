@@ -18,14 +18,43 @@ tags:
 ## 介绍
 
 web3.js是一个javascript库，用于和以太坊节点通信（通过JSON-RPC）。
-web3.js需要连接一个以太坊节点，如果在本地运行一个以太坊节点，该节点会将全部的以太坊区块链下载下来，消耗较多的计算和存储资源，如果仅仅出于开发和测试的目的，不想部署本地的以太坊节点，则可以到infura.io上申请一个远程的节点。infura.io提供以太坊节点服务，无需本地搭建节点，就可以连接到以太坊网络上，包括正式的Mainnet以及Görli, Ropsten等测试网络上。
+
+web3.js需要连接一个以太坊节点，如果在本地运行一个以太坊节点，该节点会将全部的以太坊区块链下载下来，消耗较多的计算和存储资源。
+
+如果仅仅出于开发和测试的目的，不想部署本地的以太坊节点，可以到infura.io上申请一个远程的节点。infura.io提供以太坊节点服务，无需本地搭建节点，就可以连接到以太坊网络上，包括正式的Mainnet以及Görli, Ropsten等测试网络上。
+
 Görli是一个使用权威证明（proof-of-authority）达成共识的以太坊测试网络。
 
 ## 步骤
 
-### 到infura.io上注册并创建project
+### 1 到infura.io上注册并创建project
 
-### 安装web3.js
+### 2 创建账户
+可以使用一些开发工具得到私钥和地址
 
-### 获取一些测试币
+### 3 从测试网的faucet获取一些测试币
+通常在网页上操作，提供一个账户地址即可
 
+### 4 安装web3.js
+
+### 5 编写代码
+```javascript
+
+let infura_project = "XXXXXX";
+let account_address = "0xXXXXXX";
+
+const Web3 = require('web3');
+
+if (typeof web3 !== 'undefined') {
+    web3 = new Web3(web3.currentProvider);
+} else {
+    web3 = new Web3(new Web3.providers.HttpProvider(infura_project));
+}
+
+async function showBlance() {
+    let balanceWei = await web3.eth.getBalance(account_address)
+    console.log(balanceWei)
+}
+
+showBlance();
+```
