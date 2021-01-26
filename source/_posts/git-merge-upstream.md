@@ -119,6 +119,27 @@ git log -p master  ..origin/master //比较本地的master分支和origin/master
 git merge origin/master //进行合并，注意merge/rebase命令后面跟的是branch，不能直接跟名字，例如origin
 ```
 
+## 处理不同分支之间的指定文件的差异
+
+### 在不同分支之间比较文件
+
+```
+git diff branch1 branch2 filename
+git diff branch localfilename
+```
+
+### 在不同分支之间合并文件
+
+```
+# at branch feature
+git checkout release
+# at branch release
+git checkout feature file-1
+git checkout feature file-2
+...
+git push -f 
+```
+
 ## 代码回滚
 
 ### 方式一，使用revert
