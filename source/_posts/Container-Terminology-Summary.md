@@ -48,6 +48,11 @@ A tool that facilitates building OCI images
 ### skopeo
 Work with remote images registries - retrieving information, images, signing content
 
+### crictl
+CLI for kubernetes CRI
+
+### ctr
+CLI for containerd
 ## 3 Mainstream scenarios in Kubernetes 
 
 ### 3.1
