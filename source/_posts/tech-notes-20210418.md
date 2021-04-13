@@ -10,5 +10,7 @@ tags:
 
 ---
 
+[Minikube, kind 和 k3s对比](https://brennerm.github.io/posts/minikube-vs-kind-vs-k3s.html)
+
 
 
