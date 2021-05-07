@@ -1,4 +1,4 @@
-title: Quick Links for My Interest
+title: 实用链接和书签
 
 date: 2021-01-16 09:53:57
 
@@ -8,58 +8,56 @@ categories:
 tags:
 - link
 ---
-## My working
+## Kubernetes and CNCF
 
-[blog](https://yuhuixa.com/)
+- [kubernetes c client](https://github.com/kubernetes-client/c)
 
-[kubernetes c client](https://github.com/kubernetes-client/c)
+- [openapi-generator](https://github.com/OpenAPITools/openapi-generator)
 
-[openapi-generator](https://github.com/OpenAPITools/openapi-generator)
+- [扩展 Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/)：不同的扩展Kubernetes的方法
+
+- [CNCF 基金会](https://www.cncf.io/)
 
 <!--more-->
 
-## Kubernetes and CNCF
+- [kubernetes](https://github.com/kubernetes/kubernetes)
 
-[cncf](https://www.cncf.io/)
+- [kubernetes org](https://github.com/kubernetes)
 
-[kubernetes](https://github.com/kubernetes/kubernetes)
+- [kubernetes-sigs org](https://github.com/kubernetes-sigs)
 
-[kubernetes org](https://github.com/kubernetes)
+- [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
 
-[kubernetes-sigs org](https://github.com/kubernetes-sigs)
+- [CNCF主要项目展示图](https://github.com/cncf/landscape)
 
-[kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
+- [Prometheus](https://github.com/prometheus/prometheus): 监控工具
 
-[cncf/landscape](https://github.com/cncf/landscape)
+- [virtual-kubelet](https://github.com/virtual-kubelet/virtual-kubelet)： 让kubelet工作在没有docker环境的节点上
 
-[prometheus](https://github.com/prometheus/prometheus)
+- [vks](https://github.com/miekg/vks)
 
-[virtual-kubelet](https://github.com/virtual-kubelet/virtual-kubelet)
+- [Helm](https://helm.sh/zh/docs/intro/quickstart/)
 
-[vks](https://github.com/miekg/vks)
+- [Istio](https://istio.io/latest/docs/setup/getting-started/)：服务网格
 
-[Helm](https://helm.sh/zh/docs/intro/quickstart/)
+- [Jaeger](https://github.com/jaegertracing/jaeger)：遥感数据收集
 
-[Istio](https://istio.io/latest/docs/setup/getting-started/)
-
-[Jaeger](https://github.com/jaegertracing/jaeger)
-
-[CloudEvents](https://cloudevents.io/)
+- [CloudEvents](https://cloudevents.io/)：公有云平台事件规范
 
 ## Ethereum
 
-[Ethereum Developer](https://ethereum.org/en/developers/
+- [Ethereum 开发者工具](https://ethereum.org/en/developers/
 )
 
-[Truffle Quick Start](https://www.trufflesuite.com/docs/truffle/quickstart
-)
+- [Truffle Quick Start](https://www.trufflesuite.com/docs/truffle/quickstart
+)：主流的以太坊开发工具
 
-[Görli Testnet](https://goerli.net/)
+- [Görli Testnet](https://goerli.net/)：以太坊测试网
 
 
 ## Full Stack Development
 
-[nestjs](https://docs.nestjs.com/)
+- [nestjs](https://docs.nestjs.com/)：一种Typescript开发的服务端NodeJS框架
 
-electron
+- electron
 
