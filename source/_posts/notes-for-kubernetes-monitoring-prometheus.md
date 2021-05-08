@@ -140,4 +140,163 @@ Helm 部署了 node-exporter, kube-state-metrics, 以及 alertmanager, 所以可
 
 ### 如何使用 Prometheus 监控 Kubernetes service
 
+下面的Traefik可以用Ingress-Ingix替代。
+
+Traefik是一个与微服务和Kubernetes紧密集成的反向代理，作为Ingress控制器，是你的微服务和互联网之间的桥梁。
+
+简单的安装Traefik
+```shell
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm install traefik stable/traefik --set metrics.prometheus.enabled=true
+```
+
+结果
+```
+$ kubectl get svc
+k get svc
+NAME         TYPE            CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)                     AGE
+kubernetes  ClusterIP        100.64.0.1       <none>                                                                    443/TCP                     99d
+traefik    LoadBalancer      100.65.9.227 xxx.eu-west-1.elb.amazonaws.com   443:32164/TCP,80:31829/TCP  72m
+traefik-prometheus ClusterIP 100.66.30.208    <none>                                                                    9100/TCP                    72m
+```
+
+Traefik 已经内置了 Prometheus 的指标：
+
+```shell
+$ curl 100.66.30.208:9100/metrics
+# HELP go_gc_duration_seconds A summary of the GC invocation durations.
+# TYPE go_gc_duration_seconds summary
+go_gc_duration_seconds{quantile="0"} 2.4895e-05
+go_gc_duration_seconds{quantile="0.25"} 4.4988e-05
+...
+```
+
+现在我们为 `prometheus.yml` 增加新的目标，首先看一下目前的配置：
+```shell
+kubectl get cm prometheus-server -o yaml
+```
+从结果中可以看到，Prometheus 其实也监控自己：
+```yaml
+  - job_name: 'prometheus'
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+    - targets: ['localhost:9090']
+```
+
+我们增加一个静态的端点：
+```shell
+kubectl edit cm prometheus-server  
+```
+
+```yaml
+  - job_name: 'traefik'
+    static_configs:
+    - targets: ['traefik-prometheus:9100]
+```
+
+如果服务不在同一个命名空间里，需要使用FQDN (例如：`traefik-prometheus.[namespace].svc.cluster.local`)
+
+一些配置：
+- `basic_auth` 和 `bearer_token`：用于鉴权
+- `kubernetes_sd_configs` 或 `consul_sd_configs` : 服务发现
+- `scrape_interval`, `scrape_limit`, `scrape_timeout`
+
+现在访问 Promoeheus 服务器的 `/targets`， 可以看到 Traefix 的端点:
+
+![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-5-Traefik-metrics.png)
+
+还可以定位一些 traefix 的指标：
+
+![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-6-Prometheus-query-example.png)
+
+除了使用静态目标外，还可以服务发现：
+
+```yaml
+annotations:
+  prometheus.io/port: 9216
+  prometheus.io/scrape: true
+```
+
+---
+
+### 如何使用 Prometheus exporters 监控 Kubernetes 里的服务
+
+虽然一些程序提供了 Prometheus 指标，但是还有很多程序并不提供。这个时候我们需要使用 Prometheus exporters 来做一个“翻译”或者说“适配”。
+
+![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-7-Prometheus-Exporter.png)
+
+这些 exporters 可以和主应用程序位于同一个pod里（以 sidecar 容器的形式），或者位于另外的 pod 里，甚至在不同的基础架构上。
+
+exporters 将主程序的服务指标转换成 Prometheus 指标，并暴露出去，所以你只需要从 exporter 那里拉取数据就可以了。
+
+#### 使用 PromCat：
+
+由于互联网上存在着大量的 Prometheus exporters， Sysdig公司提供了一个网站 PromCat.io，方便大家来查找。
+
+#### 动手实验：使用 Prometheus 监控 Kubernetes 集群里的 Redis 服务
+
+```shell
+# kubectl get pod redis-546f6c4c9c-lmf6z
+NAME                     READY     STATUS    RESTARTS   AGE
+redis-546f6c4c9c-lmf6z   2/2       Running   0          2m
+```
+
+安装:
+```shell
+# Clone the repo if you don't have it already
+git clone git@github.com:mateobur/prometheus-monitoring-guide.git
+kubectl create -f prometheus-monitoring-guide/redis_prometheus_exporter.yaml
+```
+
+配置 exporter:
+```yaml
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:9121']
+```
+
+这样就得到了Redis的指标：
+![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-9-Prometheus-Redis-metrics-example.png)
+
+---
+
+### 使用 Prometheus 和 kube-state-metrics 监控 Kubernetes 集群
+
+除了监控集群里的服务之外，你还可以监控 Kubernetes 集群本身：
+- 主机：CPU，内存，磁盘，等等
+- 调度流程级别的指标：Deployment 状态, resource 请求, 调度和 api server 延迟, 等等。
+- kube-system内部组件：调度器、控制管理器，DNS服务器等的指标
+
+#### Prometheus 用到的 Kubernetes 监控组件：
+- cAdvisor: 是一个开源的容器资源使用和性能分析的代理，运行在Kubelet里面，所以可以对外提供节点和Docker的指标。
+- Kube-state-metrics：监听Kubernetes API服务器，将对象（如deployments, nodes, pods）的状态转换成指标并对外提供。
+- Metrics-server：是一个集群级别的资源使用数据的聚合器。只保留最新的数据，并不负责长期存储。
+
+因此：
+- Kube-state-metrics 聚焦于调度流程级别的指标，如 deployment, pod, replica 等等的状态。
+- Metrics-server 聚焦于实现  resource metrics API ：CPU，文件描述符，内存，请求演出等等。
+
+#### 使用 Prometheus 监控 Kubernetes 节点：
+
+node-exporter 是 Prometheus 官方提供的监控节点的工具。
+
+使用 Helm 安装:
+```shell
+# add repo only needed if it wasn't done before
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+# Helm 3
+helm install [RELEASE_NAME] prometheus-community/prometheus-node-exporter
+```
+
+结果：
+```shell
+TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                                     AGE
+node-exporter-prometheus-node-exporter   ClusterIP   10.101.57.207    <none>        9100/TCP                                    17m
+```
+
+如果使用 Helm 安装 Prometheus ，则不需要做任何配置，立刻开始收集和显示节点的指标：
+
+![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-10-Prometheus-node-metrics-example.png)
+
 未完待续
