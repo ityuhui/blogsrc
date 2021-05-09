@@ -299,4 +299,85 @@ node-exporter-prometheus-node-exporter   ClusterIP   10.101.57.207    <none>    
 
 ![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-10-Prometheus-node-metrics-example.png)
 
-未完待续
+#### 使用 Prometheus 监控 kube-state-metrics：
+
+如果使用 Helm 安装 Prometheus ，则kube-state-metrics已经安装好。
+
+如果没有的话，这样安装：
+```shell
+git clone https://github.com/kubernetes/kube-state-metrics.git
+kubectl apply -f examples/standard
+...
+# kubectl get svc -n kube-system
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+kube-dns             ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP       13h
+kube-state-metrics   ClusterIP   10.102.12.190    <none>        8080/TCP,8081/TCP   1h
+```
+
+配置:
+```yaml
+  - job_name: 'kube-state-metrics'
+    static_configs:
+    - targets: ['kube-state-metrics.kube-system.svc.cluster.local:8080']
+```
+
+#### 使用 Prometheus 监控 Kubernetes 控制面：
+
+![picture](https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/Blog-Kubernetes-Monitoring-with-Prometheus-11-Monitoring-Kubernetes-Control-Plane-with-Prometheus.png)
+
+一些 Kubernetes 组件使用 Prometheus 暴露其内部的性能指标：
+
+- [Kubernetes apiserver](https://sysdig.com/blog/monitor-kubernetes-api-server/)
+- [kubelet](https://sysdig.com/blog/how-to-monitor-kubelet/)
+- [etcd](https://sysdig.com/blog/monitor-etcd/)
+- [controller-manager](https://sysdig.com/blog/how-to-monitor-kube-controller-manager/)
+- [kube-proxy](https://sysdig.com/blog/monitor-kube-proxy/)
+- [kube-dns](https://sysdig.com/blog/how-to-monitor-coredns/)
+
+监控这些组件与监控其他的 Prometheus 端点没什么不同，但有两点需要注意：
+- 这些组件很多都只能在 localhost上 侦听，使得它们很难被 Prometheus pod 访问。
+- 这些组件可能没有指向 pod 的 Kubernetes Service， 但是你总是可以创建出来。 
+
+下面用Minikube来演示如何监听kube-scheluder:
+首先安装二进制文件，然后创建一个在所有接口上对外暴露kube-scheduler服务的集群：
+
+```shell
+minikube start --memory=4096 --bootstrapper=kubeadm --extra-config=kubelet.authentication-token-webhook=true --extra-config=kubelet.authorization-mode=Webhook --extra-config=scheduler.address=0.0.0.0 --extra-config=controller-manager.address=0.0.0.0
+```
+
+接下来，创建一个指向 kube-scheduler pod 的 service：
+```yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: scheduler-service
+  namespace: kube-system
+spec:
+  selector:
+    component: kube-scheduler
+  ports:
+  - name: scheduler
+    protocol: TCP
+    port: 10251
+    targetPort: 10251
+```
+
+现在，你可以抓取这个端点：`scheduler-service.kube-system.svc.cluster.local:10251`
+
+---
+### 大规模环境下的 Prometheus
+
+[在大规模环境下使用 Prometheus 的挑战](https://sysdig.com/blog/challenges-scale-prometheus/)，一些开源工具，例如 Cortex, Thanos 可以来解决一些问题并增加新功能。
+
+--- 
+### 接下来
+
+[一些典型的与Prometheus一起部署的组件](https://sysdig.com/blog/kubernetes-monitoring-with-prometheus-alertmanager-grafana-pushgateway-part-2/)
+
+使用 PromQL 来聚合指标，发出告警，生成可视化仪表板。
+
+[使用 Prometheus operator 和 CRD](https://sysdig.com/blog/kubernetes-monitoring-prometheus-operator-part3/) 
+
+## 本文参考的英文原文：
+
+[https://sysdig.com/blog/kubernetes-monitoring-prometheus/](https://sysdig.com/blog/kubernetes-monitoring-prometheus/)
