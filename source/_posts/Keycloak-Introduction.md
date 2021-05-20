@@ -18,17 +18,13 @@ KeyCloak是Redhat开发的SSO服务程序。可以提供OpenID Connect服务。
 
 从官网下载压缩包，解压缩
 
-## 运行
+## 单机运行
 
 ```sh
-bin/standalone.sh
+bin\standalone.bat -b 0.0.0.0
 ```
 
 <!-- more -->
-
-## 配置
-
-只能在本机访问GUI，不能通过网络远程访问
 
 ### 登录
 
@@ -37,10 +33,25 @@ http://localhost:8080
 ```
 
 ### 创建管理员账户和密码
+例如
+- Name: admin
+- Passowrd: admin
 
-### 创建realm
+#### 重置密码:
+```
+bin\add-user-keycloak.bat -r master -u admin -p admin
+```
 
-取名Kubernetes
+### 创建一个realm，切换到该reaml下
+
+例如取名Kubernetes
+
+### 创建client
+
+### 创建用户
+例如
+- Name: user1
+- Password: Letmein123
 
 ### 配置SSL访问
 
