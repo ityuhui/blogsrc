@@ -8,6 +8,8 @@ categories:
 tags:
 - python
 - 装饰器
+- 设计模式
+- Design Patterns
 ---
 
 ```python

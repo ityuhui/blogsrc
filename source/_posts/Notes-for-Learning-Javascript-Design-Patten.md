@@ -1,7 +1,13 @@
 title: "Notes for Learning Javascript Design Patten"
 date: 2015-04-16 04:57:30
-tags:
 
+categories:
+- - 前端开发 Frontend Development
+
+tags:
+- Javascript
+- 设计模式
+- Design Patterns
 ---
 
 ## 设计模式的分类：

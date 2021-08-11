@@ -7,7 +7,6 @@ categories:
 
 tags:
 - C++
-- C-plus-plus
 - Modern C++
 - C++17
 

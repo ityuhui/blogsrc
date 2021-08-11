@@ -6,8 +6,10 @@ categories:
 - C++
 
 tags:
-- C-plus-plus
+- C++
 - stl
+- 数据结构
+- data structure
 
 ---
 
