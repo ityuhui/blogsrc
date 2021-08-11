@@ -3,7 +3,7 @@ title: C语言二级指针和二维数组
 date: 2010-04-21 23:00:00
 
 categories:
-- C语言
+- C和CPP
 
 tags:
 - c

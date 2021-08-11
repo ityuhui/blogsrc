@@ -3,7 +3,7 @@ title: libxml2 删除节点以后出现空行怎么办
 date: 2019-08-14 17:05:03
 
 categories:
-- C语言
+- C和CPP
 
 tags:
 - c

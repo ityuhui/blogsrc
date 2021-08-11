@@ -3,10 +3,10 @@ title: 现代C++
 date: 2020-06-16 21:15:40
 
 categories:
-- C++
+- C和CPP
 
 tags:
-- C++
+- CPP
 - Modern C++
 - C++17
 

@@ -3,7 +3,7 @@ title: 使用libyaml
 date: 2020-03-30 21:52:19
 
 categories:
-- C语言
+- C和CPP
 
 tags:
 - libyaml

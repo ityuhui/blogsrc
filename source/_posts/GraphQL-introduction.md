@@ -3,7 +3,7 @@ title: GraphQL介绍
 date: 2020-06-17 20:54:49
 
 categories:
-- Web开发
+- 前端开发 Frontend Development
 
 tags:
 - web
