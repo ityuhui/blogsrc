@@ -1,4 +1,4 @@
-title: 2021年系统顶会论文
+title: 2021年部分系统和网络顶会论文
 
 date: 2021-08-16 17:43:18
 
@@ -8,14 +8,19 @@ categories:
 tags:
 - osdi
 - paper
-
+- sosp
+- sigcomm
+- atc
+- fast
+- nsdi
+- eurosys
+- podc
 ---
 
-## OSDI 2021
 
-Ref: https://www.usenix.org/conference/osdi21/technical-sessions
+## [OSDI 2021](https://www.usenix.org/conference/osdi21/technical-sessions)
 
-最佳论文3篇：
+最佳论文：
 
 - [Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning](https://www.usenix.org/conference/osdi21/presentation/qiao)
 
@@ -25,4 +30,28 @@ Ref: https://www.usenix.org/conference/osdi21/technical-sessions
 
 ## SOSP 2021
 
-- 还未开始
+- 10月25日开始
+
+## [SIGCOMM 2021](https://conferences.sigcomm.org/sigcomm/2021/program.html)
+- 8月24日开始
+
+## [NSDI 2021](https://www.usenix.org/conference/nsdi21/technical-sessions)
+最佳论文：
+- ATP: In-network Aggregation for Multi-tenant Learning
+
+## [ATC 2021](https://www.usenix.org/conference/atc21/technical-sessions)
+
+最佳论文：
+- Argus: Debugging Performance Issues in Modern Desktop Applications with Annotated Causal Tracing
+- INFaaS: Automated Model-less Inference Serving
+- Scaling Large Production Clusters with Partitioned Synchronization
+
+## [FAST 2021](https://www.usenix.org/conference/fast21/technical-sessions)
+最佳论文：
+- High Velocity Kernel File Systems with Bento
+
+## [EuroSys 2021](https://2021.eurosys.org/papers.html#papers)
+## [Edsger W. Dijkstra Prize 2021](https://www.podc.org/dijkstra/)
+
+- Paris C. Kanellakis and Scott A. Smolka for “[CCS Expressions, Finite State Processes, and Three Problems of Equivalence](https://www.sciencedirect.com/science/article/pii/089054019090025D)” in Information and Computation, Volume 86, Issue 1, pages 43–68, 1990.
+
