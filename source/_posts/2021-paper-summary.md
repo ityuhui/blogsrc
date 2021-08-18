@@ -1,4 +1,4 @@
-title: 2021年部分系统和网络顶会论文
+title: 2021年部分系统和网络顶会论文列表
 
 date: 2021-08-16 17:43:18
 
@@ -27,6 +27,8 @@ tags:
 - [MAGE: Nearly Zero-Cost Virtual Memory for Secure Computation](https://www.usenix.org/conference/osdi21/presentation/kumar)
 
 - [DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols](https://www.usenix.org/conference/osdi21/presentation/yao)
+
+<!-- more -->
 
 ## SOSP 2021
 
