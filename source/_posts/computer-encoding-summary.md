@@ -3,7 +3,7 @@ title: C语言字符编码的一点总结
 date: 2010-04-10 19:03:00
 
 categories:
-- 软件开发通用知识
+- C和CPP
 
 tags:
 - 计算机编码
