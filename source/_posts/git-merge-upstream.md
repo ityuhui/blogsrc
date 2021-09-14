@@ -169,3 +169,26 @@ git checkout -- ${filename}
 ```shell
 git checkout .
 ```
+
+## 标签tag
+
+### 打一个带annotation的tag
+```
+git tag -a v0.1.0 -m "version 0.1.0"
+```
+
+### 查看tag
+```
+git tag -l
+git show v0.1.0
+```
+
+### 上传tag
+```
+git push origin v0.1.0
+```
+
+### 删除tag
+```
+git tag -d v0.1.0
+```
