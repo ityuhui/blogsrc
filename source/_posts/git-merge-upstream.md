@@ -158,3 +158,14 @@ git reset --hard HEAD^
 git push origin master -f
 ```
 
+## 撤销本地的修改
+
+### 单个文件
+```shell
+git checkout -- ${filename}
+```
+
+### 所有文件
+```shell
+git checkout .
+```
