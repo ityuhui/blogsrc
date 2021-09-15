@@ -192,3 +192,12 @@ git push origin v0.1.0
 ```
 git tag -d v0.1.0
 ```
+
+## 单个文件回滚
+
+### 已经push
+```shell
+git log ${filename}
+git checkout ${commit_id} ${filename}
+git push origin ${branch}
+```
