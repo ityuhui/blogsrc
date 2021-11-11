@@ -201,3 +201,28 @@ git log ${filename}
 git checkout ${commit_id} ${filename}
 git push origin ${branch}
 ```
+
+## 如何在历史中找到引起错误的一次提交
+
+使用 `git bisect`
+
+```shell
+git bisect start
+
+git bisect good 最老的好的提交的哈希
+
+git bisect bad 最新的坏的提交的哈希
+
+# 当前的repo会被checkout 到中间的提交
+
+# 如果当前的提交是坏的
+git bisect bad
+# 当前的repo会被checkout 到新的好的和坏的中间
+
+# 如果当前的提交时好的
+git bisect good
+
+# 停止
+git bisect reset
+
+```
