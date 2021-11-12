@@ -81,6 +81,16 @@ spec:
       name: kubia
 ```
 
+#### 从pod内部到宿主机拷贝文件
+
+  1. `kubectl cp /主机目录/文件路径 podName:/容器路径/xxx.datasource -n namespaces`
+这样可以把主机目录文件拷贝到容器内
+
+  2. `kubectl cp podName:容器路径/xxx.datasource -n namespaces /主机目录`
+这样可以把容器内文件cp到主机目录
+
+*注意：从容器拷贝文件到主机的时候podNname:这里不要加/ 之前加了/会一直报错
+
 #### pod 分组
 ##### tag
 ##### namespace
