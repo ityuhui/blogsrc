@@ -30,9 +30,15 @@ tags:
 
 <!-- more -->
 
-## SOSP 2021
+## [SOSP 2021](https://sosp2021.mpi-sws.org/program.html)
 
-- 10月25日开始
+最佳论文：
+
+- [Kangaroo: Caching Billions of Tiny Objects on Flash](https://dl.acm.org/doi/10.1145/3477132.3483568)
+
+- [LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism](https://dl.acm.org/doi/10.1145/3477132.3483565)
+
+- [Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3](https://dl.acm.org/doi/10.1145/3477132.3483540)
 
 ## [SIGCOMM 2021](https://conferences.sigcomm.org/sigcomm/2021/program.html)
 - 8月24日开始
