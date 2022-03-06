@@ -41,7 +41,9 @@ tags:
 - [Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3](https://dl.acm.org/doi/10.1145/3477132.3483540)
 
 ## [SIGCOMM 2021](https://conferences.sigcomm.org/sigcomm/2021/program.html)
-- 8月24日开始
+
+最佳论文：
+- Seven Years in the Life of Hypergiants’ Off-Nets
 
 ## [NSDI 2021](https://www.usenix.org/conference/nsdi21/technical-sessions)
 最佳论文：
