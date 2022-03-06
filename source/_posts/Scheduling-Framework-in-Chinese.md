@@ -71,6 +71,7 @@ Kubernetes 调度器不停的增加新特性，使得代码越来越多、逻辑
 
 ![pict](https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/624-scheduling-framework/scheduling-framework-extensions.png)
 
+https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/624-scheduling-framework/scheduling-framework-extensions.png
 #### Queue sort
 
 这些插件用于给在调度队列里的pod排序。一个queue sort插件必须提供一个 `less(pod1, pod2)` 函数。同一时间里只有一个queue sort插件可以被激活。
