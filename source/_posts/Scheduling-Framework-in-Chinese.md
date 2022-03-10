@@ -8,6 +8,8 @@ categories:
 tags:
 - k8s
 - kubernetes
+- scheduling framework
+- scheduling plugin
 
 ---
 
