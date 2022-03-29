@@ -226,3 +226,9 @@ git bisect good
 git bisect reset
 
 ```
+
+## 使用 access_token 来拉取源代码
+
+```shell
+git clone https://oauth2:token@github.ibm.com/user/repo
+```
