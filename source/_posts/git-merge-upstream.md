@@ -188,10 +188,18 @@ git show v0.1.0
 git push origin v0.1.0
 ```
 
-### 删除tag
+### 删除本地 tag
 ```
 git tag -d v0.1.0
 ```
+
+### 删除远程 tag
+
+```shell
+git push --delete origin v0.1.0
+```
+
+
 
 ## 单个文件回滚
 
