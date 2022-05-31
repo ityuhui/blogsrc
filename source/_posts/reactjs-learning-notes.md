@@ -77,3 +77,17 @@ class Welcome extends React.Component {
 
 使用 reactjs router
 https://reactrouter.com/
+
+### 在 Link 之间添加空格
+
+app.css
+```css
+.navBarLink {
+  margin: 5px;
+}
+```
+
+app.jsx
+```js
+<Link className='navBarLink' to="/">Home</Link>
+```
