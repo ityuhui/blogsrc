@@ -72,3 +72,8 @@ class Welcome extends React.Component {
 ```
 
 上述两个组件在 React 里是等效的。
+
+## Router
+
+使用 reactjs router
+https://reactrouter.com/
