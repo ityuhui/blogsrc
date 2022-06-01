@@ -30,12 +30,3 @@ Linux基金会的免费[课程](https://trainingportal.linuxfoundation.org/learn
 IBM举办的一年一度的编程挑战赛 [Call For Code](https://developer.ibm.com/callforcode/) 开始了。
 
 使用Prometheus监控Kubernetes的终极[指导](https://sysdig.com/blog/kubernetes-monitoring-prometheus/)。
-
----
-
-最后，欢迎访问我的 [技术博客](https://yuhuixa.com)
-
-以及关注我的微信公众号：分布式与云原生
-
-![picture](https://yuhuixa.com/images/mp.jpg)
-

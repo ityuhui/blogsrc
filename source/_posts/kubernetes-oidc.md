@@ -23,8 +23,4 @@ Kubernetes本身不提供用户管理，所以，Keycloak可以做用户管理�
 http://localhost:8080
 ```
 
-进入前一篇文章[Keycloak](https://yuhuixa.com/2020/08/05/Keycloak-Introduction/)创建的Realm kubernetes界面
-
-
-
-
+进入前一篇文章[Keycloak](https://ityuhui.github.io/2020/08/05/Keycloak-Introduction/)创建的Realm kubernetes界面

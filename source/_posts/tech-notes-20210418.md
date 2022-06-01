@@ -42,11 +42,4 @@ KubeCon + CloudNativeCon Europe 2021 将于2021年5月4日至7日在线上举行
 Google I/O 2021大会将于2021年5月18日至20日在线上举行，[注册地址](https://events.google.com/io/)
 
 
----
-
-最后，欢迎访问我的[技术博客](https://yuhuixa.com/)
-
-以及关注我的微信公众号：分布式计算小记
-
-
 
