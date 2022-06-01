@@ -6,7 +6,7 @@ categories:
 - 大数据和分布式计算
 
 tags:
-- Spark
+- spark
 
 ---
 

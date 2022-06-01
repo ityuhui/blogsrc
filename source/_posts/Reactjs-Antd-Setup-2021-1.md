@@ -7,6 +7,7 @@ categories:
 
 tags:
 - react
+- reactjs
 - antd
 - typescript
 ---
