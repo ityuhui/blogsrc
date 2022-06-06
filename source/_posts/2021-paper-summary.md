@@ -1,13 +1,19 @@
-title: 2021年部分系统和网络顶会论文列表
+title: 2021年部分系统和网络顶会列表
 
 date: 2021-08-16 17:43:18
 
 categories:
-- 会议论文列表
+- 计算机学术会议
 
 tags:
-- osdi
+- 顶会
+- 会议
+- 研究
+- search
 - paper
+- top
+- conference
+- osdi
 - sosp
 - sigcomm
 - atc
