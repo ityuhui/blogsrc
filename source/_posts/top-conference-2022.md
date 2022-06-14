@@ -39,7 +39,7 @@ tags:
 
 ## 数据库
 
-[SIGMOD]
+[SIGMOD 2022](https://2022.sigmod.org/sigmod_paper_awards.shtml)
 
 ## 人工智能
 
@@ -49,7 +49,7 @@ tags:
 
 ## 计算机图形学
 
-[SIGGRAPH]
+[SIGGRAPH 2022](https://s2022.siggraph.org/full-program/)
 
 
 ## 计算机系统（次一级）
