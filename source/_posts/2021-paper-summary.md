@@ -9,7 +9,7 @@ tags:
 - 顶会
 - 会议
 - 研究
-- search
+- research
 - paper
 - top
 - conference

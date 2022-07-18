@@ -64,6 +64,11 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
