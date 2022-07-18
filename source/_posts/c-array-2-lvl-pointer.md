@@ -6,7 +6,7 @@ categories:
 - C和CPP
 
 tags:
-- c
+- C language
 - 二级指针
 - 二维数组
 
