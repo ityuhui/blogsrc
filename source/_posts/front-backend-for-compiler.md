@@ -3,10 +3,13 @@ title: 什么是编译器里的前端和后端
 date: 2014-02-04 23:07:56
 
 categories:
-- 编译器
+- 编译器和解释器
 
 tags:
 - 编译器
+- 解释器
+- compiler
+- interpreter
 
 ---
 
