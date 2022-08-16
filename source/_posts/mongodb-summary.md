@@ -33,6 +33,8 @@ Start mongodb server:
 mongod --bind_ip_all --dbpath /var/lib/mongo --logpath /var/log/mongodb/mongod.log --fork
 ```
 
+Note：如果 web server 在同一台机器上，启动的时候不要 --bind_ip_all，默认只允许本地访问。
+
 Stop mongodb server:
 ```mongodb
 > use admin
@@ -60,3 +62,6 @@ mongo
 ```mongo shell
 > help
 ```
+
+参考：https://earthly.dev/blog/mongodb-docker/
+
