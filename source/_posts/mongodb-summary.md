@@ -10,14 +10,16 @@ tags:
 - mongodb
 ---
 
-## Downlaod and Install
+## 本地安装
+
+### Downlaod and Install
 
 ```bash
 mongodb-org-server_5.0.7_rc0_amd64.deb
 mongodb-org-shell_5.0.7_rc0_amd64.deb
 ```
 
-## Setup
+### Setup
 Init mongodb server:
 ```bash
 sudo mkdir -p /var/lib/mongo
@@ -37,3 +39,24 @@ Stop mongodb server:
 > db.shutdownServer();
 ```
 
+## Docker
+
+```bash
+docker run -d \
+    -p 27017:27017 \
+    --name test-mongo \
+    -v data-vol:/data/db \
+    mongo:latest
+```
+
+```bash
+docker exec -it <CONTAINER_NAME> bash
+```
+
+```bash
+mongo
+```
+
+```mongo shell
+> help
+```
