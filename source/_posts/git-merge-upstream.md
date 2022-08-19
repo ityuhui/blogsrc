@@ -240,3 +240,9 @@ git bisect reset
 ```shell
 git clone https://oauth2:token@github.ibm.com/user/repo
 ```
+
+## 从仓库里下载文件夹
+
+```bash
+curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
+```
