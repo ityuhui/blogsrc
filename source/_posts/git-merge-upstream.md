@@ -246,3 +246,11 @@ git clone https://oauth2:token@github.ibm.com/user/repo
 ```bash
 curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
 ```
+
+## 从仓库里下载指定文件
+
+先在 GitHub 页面里找到 raw 文件的URL，私有仓库的话，URL后会自动带上token
+
+```bash
+curl -Lo README.md https://raw.githubusercontent.com/kubernetes-client/c/master/README.md
+```
