@@ -43,6 +43,8 @@ Apache （后期添加）
 
 通过 bilibili 观看回放
 
+稀土掘金大会
+
 Rust Conf China (微信公众号：rust中文社区)
 
 KubeCon & CNCF China
