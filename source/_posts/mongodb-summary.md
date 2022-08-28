@@ -19,6 +19,8 @@ mongodb-org-server_5.0.7_rc0_amd64.deb
 mongodb-org-shell_5.0.7_rc0_amd64.deb
 ```
 
+<!--more-->
+
 ### Setup
 Init mongodb server:
 ```bash
