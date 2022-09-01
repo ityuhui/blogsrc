@@ -26,6 +26,8 @@ tags:
 
 KubeCon & CNCF America/Europe
 
+GitHub Universe
+
 Gopher Conf
 
 Rust Conf
