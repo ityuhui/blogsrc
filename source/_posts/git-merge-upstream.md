@@ -254,3 +254,16 @@ curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip
 ```bash
 curl -Lo README.md https://raw.githubusercontent.com/kubernetes-client/c/master/README.md
 ```
+
+## git push
+
+```bash
+# 将本地 local-branch 的内容，上传到 remote 的 remote-branch 上
+git push <remote> <local-branch>:<remote-branch>
+
+# 如果 remote-branch 省略，则 remote-branch = local-branch
+git push origin main //将本地的 main 分支上传到 origin 的 main 分支
+
+git push upstream branch1 // 将本地的 branch1 分支 上传到 upstream 的 branch1 分支上。
+```
+
