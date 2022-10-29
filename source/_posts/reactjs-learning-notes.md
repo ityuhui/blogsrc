@@ -42,10 +42,32 @@ function(x) {
 
 <!-- more -->
 
+## 原理
+
+```JavaScript
+React.createElement("h1", { id: "recipe-0" }, "Baked Salmon");
+```
+- 第一个参数是要创建的 http tag
+- 第二个参数是它的propterty
+- 第三个参数是它的children，可以是tag
+
+```JavaScript
+const dish = React.createElement("h1", null, "Baked Salmon");
+
+ReactDOM.render(dish, document.getElementById("root"));
+```
+- 第一个参数是渲染的React JavaScript对象
+- 第二个参数是要渲染的 html tag
+
 ## JSX
 
+* JSX 其实就是替换 `React.createElement` 用的
+  ```JavaScript
+  React.createElement(Alist, {list:[...]});   // JS
+  <Alist list={[...]}> // JSX
+  
+  ```
 * 大括号{}内是JavaScript表达式
-
 * JSX本身也是JavaScript表达式，可以作为参数传入JS函数，也可以作为JS的返回值。
 
 ---
@@ -62,7 +84,9 @@ function Welcome(props) {
 ```
 该函数是一个有效的 React 组件，因为它接收唯一带有数据的 “props”（代表属性）对象与并返回一个 React 元素。这类组件被称为“函数组件”，因为它本质上就是 JavaScript 函数。
 
-### 类组件
+使用 Hook 来做 函数组建的 state 管理。 
+
+### 类组件(未来将废弃)
 
 ```JS
 class Welcome extends React.Component {
