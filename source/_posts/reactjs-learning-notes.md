@@ -48,7 +48,7 @@ function(x) {
 React.createElement("h1", { id: "recipe-0" }, "Baked Salmon");
 ```
 - 第一个参数是要创建的 http tag
-- 第二个参数是它的propterty
+- 第二个参数是它的property
 - 第三个参数是它的children，可以是tag
 
 ```JavaScript
