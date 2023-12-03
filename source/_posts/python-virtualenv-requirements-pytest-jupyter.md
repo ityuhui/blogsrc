@@ -1,15 +1,19 @@
 title: Python virtualenv requirements pytest jupyter
+
 date: 2020-06-22 21:50:50
 
 categories:
+
 - Python
 
 tags:
+
 - python
-- virtualenv
+- venv
 - requirements
 - pytest
 - jupyter
+- pyenv
 
 ---
 
@@ -21,33 +25,30 @@ Python虚拟环境可以搭建一个当前工作的包依赖系统，所有的�
 
 虚拟环境指的是多个依赖包环境共存，并不是多个python共存。所有的虚拟环境都使用一个python。
 
-下面介绍的是 `virtualenv`, 但是从 Python 3.3 起，官方也提供并推荐使用 `venv`， 本文未来会进行修改，介绍 `venv`
+以前流行的是 `virtualenv`。从 Python 3.3 起，官方提供了一个相似的工具并推荐使用 `venv`
 
 <!--more-->
 
-### 安装 virtualenv
+### 安装 venv
 
-```shell
-virtualenv --version #查看是否已经安装
-pip install virtualenv
-```
+不需要安装
 
 ### 在当前的项目目录下生成虚拟环境
 
 ```shell
-virtualenv ${virtual_env_name}
+python -m venv /path/to/new/virtual/environment
 ```
 
 ### 激活虚拟环境
 
 ```shell
-${virtual_env_name}/script/activate
+source /path/to/new/virtual/environment/bin/activate
 ```
 
 ### 退出虚拟环境
 
 ```shell
-${virtual_env_name}/script/deactivate
+/path/to/new/virtual/environment/bin/deactivate
 ```
 
 ## Python 包依赖
@@ -93,13 +94,13 @@ py.test
 
 ## jupyter notebook
 
-### 安装
+### 安装 notebook
 
 ```shell
 pip install notebook
 ```
 
-### 运行
+### 运行 notebook
 
 ```shell
 jupyter notebook
@@ -122,3 +123,7 @@ c.NotebookApp.ip='*' #×允许任何ip访问
 ## Matplotlib
 
 python的绘图库，与Numpy一起使用，是MatLab的开源替代方案
+
+## pyenv
+
+安装和管理多个 Python 版本。
