@@ -126,4 +126,20 @@ python的绘图库，与Numpy一起使用，是MatLab的开源替代方案
 
 ## pyenv
 
-安装和管理多个 Python 版本。
+安装和管理多个 Python 版本
+
+## pylint
+
+静态代码检查
+
+## MyPy
+
+静态类型检查
+
+## Black
+
+代码风格
+
+## isort
+
+对 import 进行排序
