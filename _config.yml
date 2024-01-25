@@ -73,8 +73,8 @@ search:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy: 
-  type: git 
-  repo: git@github.com:ityuhui/ityuhui.github.io.git
+  type: git
+  repo: https://github.com/ityuhui/ityuhui.github.io.git
 
 prism_plugin:
   mode: 'preprocess' # realtime/preprocess
