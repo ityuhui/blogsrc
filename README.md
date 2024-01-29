@@ -105,3 +105,28 @@ search:
 local_search:
   enable: true
 ```
+
+## 支持数学公式
+
+1.安装插件
+
+```bash
+npm install hexo-math --save
+```
+
+1.更新配置文件，新增：
+
+```yaml
+math:
+  engine: 'mathjax'
+  mathjax:
+    config:
+```
+
+1.更新主题的配置文件，修改
+
+```yaml
+mathjax:
+  enable: true
+  per_page: false
+```
