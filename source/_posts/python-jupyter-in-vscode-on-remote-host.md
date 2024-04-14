@@ -25,3 +25,11 @@ Steps
 
 1. Open the remote directory with VSC,
    Create New Jupyter Notebook command from the Command Palette (Ctrl+Shift+P) or by creating a new .ipynb file in your workspace.
+
+## Jupyter notebooks in Visual Studio Code does not use the active virtual environment
+
+```bash
+(venv) $ ipython kernel install --user --name=venv_name
+```
+
+Ref: <https://stackoverflow.com/questions/58119823/jupyter-notebooks-in-visual-studio-code-does-not-use-the-active-virtual-environm>
