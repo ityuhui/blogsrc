@@ -28,6 +28,16 @@ Steps
 
 ## Jupyter notebooks in Visual Studio Code does not use the active virtual environment
 
+### Option 1
+
+VSCode:
+Windows: F1
+Mac: _
+
+Python:Select Interpreter
+
+### Option 2
+
 ```bash
 (venv) $ ipython kernel install --user --name=venv_name
 ```
