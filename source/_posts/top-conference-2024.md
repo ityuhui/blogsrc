@@ -29,7 +29,6 @@ tags:
 ## 计算机系统
 
 [OSDI 2024](https://www.usenix.org/conference/osdi24/)
-
 [SOSP 2024](https://sigops.org/s/conferences/sosp/2024/)
 
 ## 人工智能
@@ -56,11 +55,8 @@ tags:
 ### 计算机系统-次级
 
 [ATC 2024](https://www.usenix.org/conference/atc24)
-
 [FAST 2024](https://www.usenix.org/conference/fast24)
-
 [EuroSys 2024](https://2024.eurosys.org/)
-
 [PODC and Edsger W. Dijkstra Prize 2024](https://www.podc.org/podc2024)
 
 ### 计算机网络-次级
