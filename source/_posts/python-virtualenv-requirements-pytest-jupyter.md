@@ -143,3 +143,7 @@ python的绘图库，与Numpy一起使用，是MatLab的开源替代方案
 ## isort
 
 对 import 进行排序
+
+## Poetry / Pipenv
+
+和 pip 类似，项目包管理器
