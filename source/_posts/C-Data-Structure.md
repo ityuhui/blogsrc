@@ -37,6 +37,6 @@ stack：实现deque实现
 queue：使用deque实现
 priority_queue：使用vector实现
 
-## 参考
+## 相关
 
-[Data Structure Summary](./data-structure-summary.md)
+[Data Structure](https://ityuhui.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/)

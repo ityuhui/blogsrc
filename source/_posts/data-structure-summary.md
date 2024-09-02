@@ -40,6 +40,6 @@ tags:
 - 树 tree
 - 图 graphic
 
-## 参考
+## 相关
 
-[C++ 数据结构](./C-Data-Structure.md)
+[Data Structure](https://ityuhui.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/)
