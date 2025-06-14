@@ -39,6 +39,8 @@ Lotte Hotel World, Seoul, Republic of Korea
 ## 人工智能
 
 [NIPS 2025](https://nips.cc/Conferences/2025)
+Tuesday Dec 2nd through Sunday Dec 7th
+San Diego Convention Center
 
 [ICML 2025](https://icml.cc/Conferences/2025)
 July 13th through July 19th
